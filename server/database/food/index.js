@@ -13,7 +13,7 @@ const FoodSchema = new mongoose.Schema({
     addOns: [
         {
             type: mongoose.Types.ObjectId,
-            ref: "Foods",
+            ref: "Foods",  
         },
     ],
 
@@ -22,6 +22,9 @@ const FoodSchema = new mongoose.Schema({
         ref: "Restaurants",
         required: true,
     }
+},
+{
+    timestamps: true
 });
 
 export const FoodModel = mongoose.model("Foods", FoodSchema);
